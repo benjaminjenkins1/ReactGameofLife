@@ -162,14 +162,17 @@ var Board = function (_React$Component) {
 	Board.prototype.changeSpeed = function changeSpeed() {
 		switch (interval) {
 			case 200:
+				clearInterval(intervalID);
 				interval = 100;
 				intervalID = setInterval(this.tick.bind(this), interval);
 				break;
 			case 100:
+				clearInterval(intervalID);
 				interval = 50;
 				intervalID = setInterval(this.tick.bind(this), interval);
 				break;
 			case 50:
+				clearInterval(intervalID);
 				interval = 200;
 				intervalID = setInterval(this.tick.bind(this), interval);
 				break;
